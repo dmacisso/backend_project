@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('includes/head.ejs') %>
+
+  <body>
+    <%- include('includes/header.ejs') %>
+    <main>
+      <form action="/login" method="POST">
+        <% errors.forEach( error => { %>
+        <p class="notice"><%= error %></p>
+        <% }) %>
+
+        <fieldset>
+          <legend>Log In</legend>
+          <label for="username"> <small>Username</small> </label>
+          <input id="username" name="username" type="text" autocomplete="off" />
+          <label for="password"> <small>Password</small> </label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            autocomplete="off"
+          />
+          <br />
+          <button>Log In</button>
+        </fieldset>
+      </form>
+    </main>
+    <%- include('includes/footer.ejs') %>
+  </body>
+</html>
+

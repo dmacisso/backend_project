@@ -1,0 +1,9 @@
+{
+  "djlint.showInstallError": false,
+  "cSpell.words": [
+    "AUTOINCREMENT",
+    "JWTSECRET",
+    "ROWID",
+    "userid"
+  ]
+}

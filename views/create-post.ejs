@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('includes/head.ejs') %>
+  <body>
+    <%- include('includes/header.ejs') %>
+    <main></main>
+      <form action="/create-post" method="POST">
+        <% errors.forEach( error => { %>
+        <p class="notice"><%= error %></p>
+        <% }) %>
+
+        <fieldset>
+          <legend>Create a New Post</legend>
+          <label for="title"> <small>Title</small> </label>
+          <input id="title" name="title" type="text" autocomplete="off" />
+          <label for="body"> <small>Content</small> </label>
+          <textarea
+            id="body"
+            name="body"
+            type="text"
+            autocomplete="off"
+          ></textarea>
+          
+          <br />
+          <button>Save Post</button>
+        </fieldset>
+      </form>
+    </main>
+    <%- include('includes/footer.ejs') %>
+  </body>
+</html>
+
